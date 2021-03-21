@@ -35,11 +35,11 @@ Open index.html in Chrome.
 
 ## Links
 
-[Repository]()
+[Repository](https://github.com/ARFreiler/Password_Generator)
 
-[Password Generator]()
+[Password Generator](https://arfreiler.github.io/Password_Generator/)
 
-
+![](https://user-images.githubusercontent.com/75546695/111907977-d3697f80-8a2d-11eb-87e9-6400b1e0c036.png)
 
 ## License
 
