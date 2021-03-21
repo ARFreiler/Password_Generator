@@ -40,10 +40,10 @@ function generatePassword() {
     confirmSpecial = confirm("Do you want to include special characters?");
   }
 
-  console.log(confirmLower);
-  console.log(confirmUpper);
-  console.log(confirmNumber);
-  console.log(confirmSpecial);
+  // console.log(confirmLower);
+  // console.log(confirmUpper);
+  // console.log(confirmNumber);
+  // console.log(confirmSpecial);
 
   // Defines arrays of different character types.
   var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -75,16 +75,26 @@ function generatePassword() {
 
   // var passIndex = Math.floor(Math.random() * passPool.length);
   // var randomPass = passPool[passIndex];
-
   function pushChar() {
     var randomPassword = [];
-    for (let i = 0; i < pwLength; i++) {
-      var index = Math.floor(Math.random() * passPool.length);
-      console.log(passPool[index]);
-      randomPassword.push(item);
+    for (var i = 0; i < pwLength; i++) {
+        var item = passPool[Math.floor(Math.random() * passPool.length)];
+        randomPassword.push(item);
+}
+return randomPassword;
+}
+var password = pushChar();
+  
+var checkUpper = (upper.some(ele => password.includes(ele)))
+var checkLower = (lower.some(ele => password.includes(ele)))
+var checkNumeric = (number.some(ele => password.includes(ele)))
+var checkSpecial = (special.some(ele => password.includes(ele)))
 
-    }
+if (checkUpper === confirmUpper &&
+    checkLower === confirmLower &&
+    checkNumeric === confirmSpecial &&
+    checkSpecial === confirmNumber) 
 
-  }
-
+// Presents randomly generated password to the user. 
+  return password.join("");
 }
